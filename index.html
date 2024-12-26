@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATB.AI Chat</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h3>ATB.AI Chat</h3>
+            <button class="sidebar-toggle">≡</button>
+        </div>
+        <div class="model-selector">
+            <select id="model-select">
+                <option value="meta-llama/llama-3.2-3b-instruct:free">Llama 3.2</option>
+                <option value="anthropic/claude-2">Claude 2</option>
+            </select>
+        </div>
+        <div class="sidebar-links">
+            <a href="https://github.com/yourusername" class="sidebar-link" target="_blank">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="" class="sidebar-link">
+                <i class="fas fa-briefcase"></i> Portfolio
+            </a>
+            <a href="changelog.html" class="sidebar-link">
+                <i class="fas fa-history"></i> Changelog
+            </a>
+        </div>
+        <button onclick="clearChat()" class="clear-button">Clear Chat</button>
+    </div>
+    <div class="chat-container">
+        <div id="chat-messages" class="messages-wrapper"></div>
+        <div class="input-container">
+            <input type="text" id="user-input" placeholder="Napisz wiadomość..." autocomplete="off">
+            <button onclick="sendMessage()" class="send-button">Wyślij</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
